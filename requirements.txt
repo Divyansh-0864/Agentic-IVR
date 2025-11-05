@@ -1,0 +1,12 @@
+# env and utility
+python-dotenv
+
+# TTS
+
+# STT
+
+# LLMS
+
+# Langchain
+
+# LangGraph
