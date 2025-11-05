@@ -1,0 +1,5 @@
+audio_path,reference
+samples/hello_world.wav,hello world this is a whisper benchmark test
+samples/meeting_intro.wav,good morning everyone welcome to the weekly meeting
+samples/weather_report.wav,today the weather is mostly sunny with a chance of light rain in the evening
+samples/story_clip.wav,once upon a time there was a little robot who wanted to learn to sing
