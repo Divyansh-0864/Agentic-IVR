@@ -1,9 +1,18 @@
 # env and utility
 python-dotenv
 
+# Metrics and benchamrking
+psutil 
+soundfile 
+numpy 
+pandas
+
 # TTS
+gTTS
 
 # STT
+openai-whisper 
+faster-whisper 
 
 # LLMS
 
