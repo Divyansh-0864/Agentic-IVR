@@ -8,7 +8,7 @@ Output: bench_results.csv
 
 Usage examples:
   # manifest.csv must have header: audio_path,reference
-  python whisper_benchmark.py --manifest manifest.csv --models "whisper:tiny,faster-whisper:tiny" --out bench_results.csv
+  python whisper_benchmark.py --manifest data/manifest.csv --models "whisper:tiny,faster-whisper:tiny" --compute_type int8 --cpu_threads 4
 
   # single file:
   python whisper_benchmark.py --file examples/audio1.wav --ref "expected transcription" --models "whisper:tiny,faster-whisper:tiny"
@@ -135,13 +135,14 @@ def run_bench_for_faster_whisper(model_name, audios, args):
         })
     return results
 
+# Call from dir = experiments/whisper
 def main():
     parser = argparse.ArgumentParser(description="Benchmark whisper vs faster-whisper on CPU")
-    parser.add_argument("--manifest", help="CSV with header audio_path,reference (paths must be accessible)")
+    parser.add_argument("--manifest", default="data/manifest.csv",help="CSV with header audio_path,reference (paths must be accessible)")
     parser.add_argument("--file", help="single audio file")
     parser.add_argument("--ref", help="reference transcription for single file")
     parser.add_argument("--models", required=True, help='Comma-separated list of models to test, format "<framework>:<model_name>". e.g. "whisper:tiny,faster-whisper:tiny"')
-    parser.add_argument("--out", default="bench_results.csv", help="output CSV file")
+    parser.add_argument("--out", default="results/bench_results_small.csv", help="output CSV file")
     parser.add_argument("--language", default=None, help="language code to pass to transcribe() (optional)")
     parser.add_argument("--compute_type", default=None, help="compute_type for faster-whisper (e.g. int8, int16). If omitted, default is None")
     parser.add_argument("--cpu_threads", type=int, default=4, help="cpu threads for faster-whisper")
