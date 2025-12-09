@@ -1,5 +1,9 @@
 # env and utility
 python-dotenv
+requests
+
+# Logging
+loguru
 
 # Metrics and benchamrking
 psutil 
@@ -15,7 +19,22 @@ openai-whisper
 faster-whisper 
 
 # LLMS
+langchain-groq
+langchain-ollama
+
+# Rag
+sentence_transformers
+faiss-cpu
 
 # Langchain
+langchain
+langchain-core
+langchain-huggingface
+langchain-community
 
 # LangGraph
+
+
+# UI
+streamlit
+streamlit-audiorecorder

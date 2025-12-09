@@ -1,0 +1,3 @@
+Welcome to the demo of our intelligent IVR system powered by speech recognition. 
+You can say things like, 'Check my account balance,' or 'Transfer money to savings.' 
+Our system will understand your intent and respond instantly, making phone banking simple and secure.
